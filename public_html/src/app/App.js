@@ -14,7 +14,25 @@ Application = Ext.app.App = new (Ext.extend(Object, {
 
     init : function() {
 
+        var me = this;
 
+        // ビューポート生成
+        me.viewport = new Ext.Viewport({
+            layout: 'border',
+            items: [{
+                region: 'north',
+                html: 'Next Mongo'
+            },{
+                region: 'west',
+                xtype: 'conntree',
+                width: 250
+            },{
+                region: 'center'
+            },{
+                region: 'south',
+                html: 'Copyright &copy; 2011 Xenophy.CO.,LTD All rights Reserved. powered by Next JS.'
+            }]
+        });
 
     }
 
